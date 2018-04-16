@@ -19,7 +19,7 @@ const $classExample = $('.example');
 ```js
 const classExample = document.getElementsByClassName('example');
 
-for (i = 0; i < classExample.length; i++) {
+for (let i = 0; i < classExample.length; i++) {
     classExample[i];
 }
 ```
@@ -33,7 +33,7 @@ const $tagExample = $('div');
 ```js
 const tagExample = document.getElementsByTagName('div');
 
-for (i = 0; i < tagExample.length; i++) {
+for (let i = 0; i < tagExample.length; i++) {
     tagExample[i];
 }
 ```
