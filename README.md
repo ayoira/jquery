@@ -12,7 +12,7 @@ $('p');                // tag
 $('[type="text"]');    // attribute
 $('h1:first-of-type'); // pseudo
 $('p, div');           // multiple
-$('.footer h1');       // specific
+$('.footer h1');       // descendent
 ```
 
 ```js
@@ -26,6 +26,7 @@ document.querySelectorAll('.demo');
 document.querySelectorAll('p');
 document.querySelectorAll('type="text"');
 document.querySelectorAll('h1:first-of-type');
+document.querySelectorAll('.footer h1');
 ```
 
 
@@ -220,8 +221,8 @@ element.textContent = 'New text';
 ```js
 var arr = ['tiger', 'cat', 'lion'];
 
-$.each(arr, function(index, val) {
-	$('ul').append('<li>' + index + ': ' + val + '</li>');
+$.each(arr, function(key, val) {
+	$('ul').append('<li>' + key + ': ' + val + '</li>');
 });
 ```
 
