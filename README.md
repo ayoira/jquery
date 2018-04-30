@@ -215,6 +215,27 @@ $('element').text('New text');
 element.textContent = 'New text';
 ```
 
+## Looping
+
+```js
+var arr = ['tiger', 'cat', 'lion'];
+
+$.each(arr, function(index, val) {
+	$('ul').append('<li>' + index + ': ' + val + '</li>');
+});
+```
+
+```js
+var arr = ['tiger', 'cat', 'lion'];
+var ul = document.querySelector('ul');
+
+arr.forEach(function(value, index) {
+	li = document.createElement('li');
+	li.textContent = index + ': ' + value;
+	ul.appendChild(li);
+});
+```
+
 ## Effects
 
 
