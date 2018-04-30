@@ -170,7 +170,28 @@ element.nextSibling;
 
 ### Children
 
-## Event Listeners
+## Append HTML string
+
+```js
+$('element').append('<p>A paragraph</p>');
+```
+
+```js
+element.innerHTML = '<p>A paragraph</p>';
+```
+
+## Append elements
+
+```js
+var body = document.body;
+var p = document.createElement('p');
+p.textContent = 'A paragraph';
+
+body.appendChild(p);
+```
+
+
+## Event listeners
 
 ```js
 $('element').on('click', function() { 
@@ -193,3 +214,7 @@ $('element').text('New text');
 ```js
 element.textContent = 'New text';
 ```
+
+## Effects
+
+
