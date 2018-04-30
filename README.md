@@ -1,26 +1,39 @@
 # jQuery to JavaScript Dictionary
 
-### Accessing ID
+## Selectors
+
+### Accessing selectors
 
 ```js
-// jQ
-const element = $('#example');
+$('[type="text"]');
 ```
 
 ```js
-// JS
-const element = document.getElementById('example');
-```
-
-### Accessing a class
-
-```js
-// jQ
-const elements = $('.example');
+document.querySelector('type="text"');
 ```
 
 ```js
-// JS
+document.querySelectorAll('footer a');
+```
+
+
+### Accessing an id
+
+```js
+$('#example');
+```
+
+```js
+document.getElementById('example');
+```
+
+### Accessing classes
+
+```js
+$('.example');
+```
+
+```js
 const elements = document.getElementsByClassName('example');
 
 for (let i = 0; i < element.length; i++) {
@@ -28,15 +41,13 @@ for (let i = 0; i < element.length; i++) {
 }
 ```
 
-### Accessing a tag
+### Accessing tags
 
 ```js
-// jQ
-const elements = $('div');
+$('div');
 ```
 
 ```js
-// JS
 const elements = document.getElementsByTagName('div');
 
 for (let i = 0; i < elements.length; i++) {
@@ -44,39 +55,102 @@ for (let i = 0; i < elements.length; i++) {
 }
 ```
 
+## Classes
+
 ### Adding a class
 
 ```js
-// jQ
-element.addClass('selected');
+$(element).addClass('selected');
 ```
 
 ```js
-// JS
 element.classList.add('selected');
 ```
 
 ### Removing a class
 
 ```js
-// jQ
-element.removeClass('selected');
+$(element).removeClass('selected');
 ```
 
 ```js
-// JS
 element.classList.remove('selected');
 ```
 
-### Modify CSS
+### Toggling a class
 
 ```js
-// jQ
-element.css('color', 'blue');
+$(element).toggleClass('selected');
 ```
 
 ```js
-// JS
-element.setAttribute('style', 'color: blue;');
+element.classList.toggle('selected');
+```
+
+### Getting a class
+
+```js
+$(element).hasClass('selected');
+```
+
+```js
+element.classList.contains('selected');
+```
+
+## Styles
+
+### Modifying CSS
+
+```js
+$(element).css('color', 'blue');
+```
+
+```js
 element.style.color = 'blue';
+```
+
+## Attributes
+
+### Geting attributes
+
+```js
+$(element).attr('href', 'index.html');
+```
+
+```js
+element.getAttribute('href');
+```
+
+### Setting attributes
+
+```js
+$(element).attr('href', 'index.html');
+```
+
+```js
+element.setAttribute('href', 'index.html');
+```
+
+## Event Listeners
+
+```js
+$(element).on('click', function() { 
+	// ...
+});
+```
+
+```js
+element.addEventListener('click, function() {
+	// ...
+});
+```
+
+## Modifying Text
+
+```js
+$(element).text('New text');
+```
+
+```js
+element.textContent = 'New text';
 ```
