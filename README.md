@@ -140,7 +140,7 @@ $(element).on('click', function() {
 ```
 
 ```js
-element.addEventListener('click, function() {
+element.addEventListener('click', function() {
 	// ...
 });
 ```
