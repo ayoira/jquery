@@ -68,6 +68,12 @@ for (let i = 0; i < elements.length; i++) {
 }
 ```
 
+# Find
+
+```js
+elements.querySelectorAll(selector);
+```
+
 ## Classes
 
 ### Adding a class
@@ -165,11 +171,33 @@ $('element').siblings();
 ```
 
 ```js
+// todo
+```
+
+### Children
+
+```js
+$('element').siblings();
+```
+
+```js
 element.previousSibling;
 element.nextSibling;
 ```
 
-### Children
+### Previous and Next
+
+```js
+$('element').prev();
+$('element').next();
+```
+
+```js
+element.previousSibling;
+element.previousElementSibling;
+element.nextSibling;
+element.nextElementSibling;
+```
 
 ## Append HTML string
 
@@ -195,15 +223,12 @@ body.appendChild(p);
 ## Event listeners
 
 ```js
-$('element').on('click', function() { 
-	// ...
-});
+$('element').on('click', function() { ... });
+$('element').click(function() { ... });
 ```
 
 ```js
-element.addEventListener('click', function() {
-	// ...
-});
+element.addEventListener('click', function() { ... });
 ```
 
 ## Modifying Text
@@ -227,8 +252,9 @@ $.each(arr, function(key, val) {
 ```
 
 ```js
-var arr = ['tiger', 'cat', 'lion'];
-var ul = document.querySelector('ul');
+const arr = ['tiger', 'cat', 'lion'];
+const ul = document.querySelector('ul');
+let li;
 
 arr.forEach(function(value, index) {
 	li = document.createElement('li');
@@ -237,6 +263,21 @@ arr.forEach(function(value, index) {
 });
 ```
 
+## Forms
+
+```js
+$('element').val();
+```
+
+```js
+element.value;
+```
+
 ## Effects
+
+### Fade in/out
+
+https://codepen.io/taniarascia/pen/rvzBbM
+
 
 
