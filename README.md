@@ -277,7 +277,27 @@ element.value;
 
 ### Fade in/out
 
-https://codepen.io/taniarascia/pen/rvzBbM
+```js
+$('element').fadeIn();
+$('element').fadeOut();
+```
 
+```css
+.element {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.fadein {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .3s, opacity .3s ease-in-out;
+}
+```
+
+```js
+element.classList.toggle('fadein');
+```
 
 
