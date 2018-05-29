@@ -199,6 +199,22 @@ element.nextSibling;
 element.nextElementSibling;
 ```
 
+```js
+function getNextSiblings(el) {
+    let siblings = [];
+    while (el = el.nextSibling) { 
+    	siblings.push(el); 
+    }
+    return siblings;
+}
+    
+    let elements = getNextSiblings(el);
+    
+    elements.forEach(el => { 
+    	// do something
+    }); 
+```
+
 ## Append HTML string
 
 ```js
